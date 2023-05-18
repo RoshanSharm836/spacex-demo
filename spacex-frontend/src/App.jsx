@@ -66,22 +66,28 @@ export default function App() {
           return <Card data={el} key={i} />;
         })}
       </section>
-      <section>
-        <h1 className="heading">All Capsules</h1>
-        {active ? <Popup active={active} setActive={setActive} id={id} /> : ""}
-        <div className="card_grid">
-          {Current?.map((el, i) => {
-            return (
-              <Card data={el} setActive={setActive} setId={setId} key={i} />
-            );
-          })}
+      <section className="allcards">
+        <div className="card_box">
+          <h1 className="heading">All Capsules</h1>
+          {active ? (
+            <Popup active={active} setActive={setActive} id={id} />
+          ) : (
+            ""
+          )}
+          <div className="card_grid">
+            {Current?.map((el, i) => {
+              return (
+                <Card data={el} setActive={setActive} setId={setId} key={i} />
+              );
+            })}
+          </div>
+          <Pagenation
+            Total={data?.length}
+            currentPage={page}
+            limit={limit}
+            setPage={setPage}
+          />
         </div>
-        <Pagenation
-          Total={data?.length}
-          currentPage={page}
-          limit={limit}
-          setPage={setPage}
-        />
       </section>
     </div>
   );

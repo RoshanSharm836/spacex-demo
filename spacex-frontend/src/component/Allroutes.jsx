@@ -7,7 +7,7 @@ import Login from "./Login";
 
 function Allroutes() {
   return (
-    <div>
+    <div className="container-box ">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

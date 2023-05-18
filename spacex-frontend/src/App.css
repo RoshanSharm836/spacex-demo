@@ -3,9 +3,10 @@
   margin: 0;
   background-color: #000000;
   color: #fff;
+  font-family: sans-serif;
 }
 /* media */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 780px) {
   .card_grid {
     grid-template-columns: repeat(2, 1fr) !important;
     width: 100% !important;
@@ -51,15 +52,24 @@ a {
   padding: 20px;
   width: 80%;
   margin: auto;
+  text-transform: capitalize;
   display: flex;
   gap: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.card_box {
+  width: 80%;
+  margin: auto;
+  background: transparent;
+}
+
 .card_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 90%;
+  background: transparent;
   margin: auto;
   margin-top: 60px;
   justify-items: center;
@@ -78,9 +88,12 @@ a {
 }
 .container_right h1 {
   font-size: 54px;
+  font-family: "Lato";
+  font-weight: 100;
   margin-bottom: 20px;
 }
 .container_right p {
+  font-family: "Lato";
   width: 50%;
 }
 .container img {
@@ -96,19 +109,19 @@ a {
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 5px;
-  background-color: #222222;
+  background-color: #222222d4;
+  text-transform: capitalize;
 }
 
 .card p {
   padding: 0px 20px;
-  background-color: #222222;
+  background-color: transparent;
   margin: 20px 8px;
   color: #7e7e7ebf;
-  text-transform: capitalize;
 }
 .card h1 {
   display: flex;
-  background-color: #222222;
+  background-color: transparent;
   align-items: center;
   margin: 15px 0px;
   padding: 5px 25px 0px 25px;
@@ -139,6 +152,7 @@ section {
 }
 .pagination {
   display: flex;
+  background-color: transparent;
   gap: 10px;
   margin: 30px 0;
 }
@@ -157,13 +171,28 @@ section {
   color: #000;
 }
 /* login */
+.container-box,
+.allcards {
+  width: 100%;
+  background-image: url(../public/suit.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 0;
+}
+
 .login {
   display: flex;
   flex-direction: column;
-
   height: 100vh;
-  /* border: 1px solid #fff; */
+  background: transparent;
   justify-content: center;
+}
+.login_box {
+  border: 1px solid;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 form {
   max-width: 300px;
@@ -171,6 +200,7 @@ form {
 }
 form input {
   border: 1px solid #fff;
+  padding: 10px;
 }
 
 form label,

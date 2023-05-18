@@ -25,34 +25,37 @@ function Signup() {
   };
   return (
     <>
+      {/* <img src="./suit.svg" alt="" /> */}
       <form className="login">
-        <h1 className="heading">Signup</h1>
-        <br />
-        <br />
-        <br />
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" onChange={handlechange} />
+        <div className="login_box">
+          <h1 className="heading">Signup</h1>
+          <br />
+          <br />
+          <br />
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" onChange={handlechange} />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" onChange={handlechange} />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" onChange={handlechange} />
 
-        <label for="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          onChange={handlechange}
-          required
-        />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            onChange={handlechange}
+            required
+          />
 
-        <button className="button-23" onClick={handlesubmit}>
-          Submit
-        </button>
-        <br />
+          <button className="button-23" onClick={handlesubmit}>
+            Submit
+          </button>
+          <br />
 
-        <NavLink to={"/login"}>
-          <span>login</span>
-        </NavLink>
+          <NavLink to={"/"}>
+            <span>login</span>
+          </NavLink>
+        </div>
       </form>
     </>
   );
