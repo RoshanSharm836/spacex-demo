@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getToken } from "./Axios/user";
+import { getToken } from "../Axios/user";
 
 export default function Private({ children }) {
   const navigate = useNavigate();

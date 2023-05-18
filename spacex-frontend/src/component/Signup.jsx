@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { signupApi } from "./Axios/user";
+import { signupApi } from "../Axios/user";
 
 function Signup() {
   const [data, setData] = useState({});

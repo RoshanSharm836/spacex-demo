@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
-import Card from "./Card";
-import Navbar from "./Navbar";
-import Filter from "./Filter";
-import Pagenation from "./Pagenation";
-import { NavLink } from "react-router-dom";
-import Popup from "./Popup";
+import Navbar from "./component/Navbar";
+import Filter from "./component/Filter";
+import Card from "./component/Card";
+import Popup from "./component/Popup";
+import Pagenation from "./component/Pagenation";
 export default function App() {
   const [data, setData] = useState([]);
   const [id, setId] = useState();
   const [newdata, setNewData] = useState([]);
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(5);
+  const [limit] = useState(5);
   const [active, setActive] = useState(false);
   useEffect(() => {
     calldata();
@@ -26,7 +25,9 @@ export default function App() {
   }
 
   function filterdata(name, value) {
+    // eslint-disable-next-line array-callback-return
     let d = data.filter((el) => {
+      // eslint-disable-next-line eqeqeq
       if (el[name] == value) {
         return el;
       }

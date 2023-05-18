@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import App from "./App";
-import Login from "./Login";
-import Signup from "./Signup";
+import App from "../App";
 import Private from "./Private";
+import Signup from "./Signup";
+import Login from "./Login";
 
 function Allroutes() {
   return (
