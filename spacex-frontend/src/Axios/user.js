@@ -13,3 +13,7 @@ export async function signupApi({ name, email, password }) {
     password,
   });
 }
+
+export async function getToken() {
+  return axios.get(`api/login/header`);
+}

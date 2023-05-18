@@ -17,7 +17,7 @@ function Signup() {
     signupApi(data)
       .then((res) => {
         alert("signup done!");
-        navigate("/login");
+        navigate("/");
       })
       .catch((err) => {
         alert("invalid email");

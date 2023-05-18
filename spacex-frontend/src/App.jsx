@@ -5,11 +5,15 @@ import Card from "./Card";
 import Navbar from "./Navbar";
 import Filter from "./Filter";
 import Pagenation from "./Pagenation";
+import { NavLink } from "react-router-dom";
+import Popup from "./Popup";
 export default function App() {
   const [data, setData] = useState([]);
+  const [id, setId] = useState();
   const [newdata, setNewData] = useState([]);
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(5);
+  const [active, setActive] = useState(false);
   useEffect(() => {
     calldata();
   }, []);
@@ -63,10 +67,12 @@ export default function App() {
       </section>
       <section>
         <h1 className="heading">All Capsules</h1>
-
+        {active ? <Popup active={active} setActive={setActive} id={id} /> : ""}
         <div className="card_grid">
           {Current?.map((el, i) => {
-            return <Card data={el} key={i} />;
+            return (
+              <Card data={el} setActive={setActive} setId={setId} key={i} />
+            );
           })}
         </div>
         <Pagenation

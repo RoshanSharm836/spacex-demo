@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { loginApi } from "./Axios/user";
+import { getToken, loginApi } from "./Axios/user";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
@@ -19,7 +19,7 @@ function Login() {
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("auth-token", token);
-        navigate("/");
+        navigate("/home");
       })
       .catch((err) => {
         alert("invalid email");
