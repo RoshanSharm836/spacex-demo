@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(36, 36, 36);
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+.navbar {
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 70%;
+  margin: auto;
+  margin-top: 60px;
+  justify-items: center;
+}
+.container {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+}
+.container_right {
+  width: 80%;
+  margin-bottom: 20px;
+}
+.container_right h1 {
+  font-size: 54px;
+  margin-bottom: 20px;
+}
+.container img {
+  width: 100%;
+}
+.heading {
+  font-size: 36px;
+  font-weight: 500;
+}
+.card {
+  width: 90%;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 5px;
+}
+
+.card p {
+  padding: 0px 20px;
+  margin: 20px 8px;
+  color: #7e7e7ebf;
+  text-transform: capitalize;
+}
+.card h1 {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+  padding: 5px 25px 0px 25px;
+}
+
+.filter_section {
+  min-height: 100px;
+  margin: 50px auto;
+}
+.filter {
+  padding: 20px 0;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.filter option {
+  padding: 10px;
+}
+.filter select {
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+section {
+  width: 81%;
+  margin: auto;
+}
+.pagination {
+  display: flex;
+  gap: 10px;
+}
+.pagination button.active {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #000;
+}
+.pagination button {
+  padding: 10px;
+  border: 1px solid;
+}
+
+.pagination button:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* login */
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+form label,
+form input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+.button-23 {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.button-23:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+.button-23:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
+}
