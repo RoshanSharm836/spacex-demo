@@ -1,7 +1,4 @@
 # Typing-test
-<h1>About ✨</h1>
-<p>Typing-test</p>
-<p>This one is a typing test that expresses your typing skills in words per minute. The more you practice typing, and the more you test your typing speed, the higher your WPM score will be.</p>
 <h4>About this project</h4>
 <a target="_blank" href="https://spacex11.netlify.app/">Project Link</a>
 
