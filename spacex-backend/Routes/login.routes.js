@@ -42,10 +42,8 @@ loginroutes.post("/auth", async (req, res) => {
   //login
   const emails = req.body.email;
   const passwords = req.body.password;
-  // console.log(emails, passwords);
+  console.log(req.body);
   try {
-    // console.log(req.body);
-
     const data = await signup.findOne({ email: emails });
     if (!data) {
       console.log("invalid gmail");

@@ -2,7 +2,7 @@ const express = require("express");
 const signup = require("../model/signup.schema");
 
 const signuproutes = express.Router();
-signuproutes.post("/", async (req, res) => {
+signuproutes.post("/auth", async (req, res) => {
   try {
     const data = await signup.findOne({ email: req.body.email });
 
