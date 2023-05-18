@@ -1,6 +1,6 @@
 import axios from ".";
 export async function loginApi({ email, password }) {
-  console.log("sdas", email, password);
+  // console.log("sdas", email, password);
   return axios.post("/api/login/auth", {
     email,
     password,

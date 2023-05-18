@@ -1,6 +1,9 @@
 import React from "react";
 
-function Filter({ filter, setFilter, func }) {
+function Filter({ newdata, setNewData, func }) {
+  const handlesubmit = (e) => {
+    setNewData([]);
+  };
   const handlechange = (e) => {
     // console.log(e.target.name, e.target.value);
     func(e.target.name, e.target.value);
@@ -27,9 +30,13 @@ function Filter({ filter, setFilter, func }) {
         <option value="Dragon 1.1">Dragon 1.1</option>
         <option value="Dragon 2.0">Dragon 2.0</option>
       </select>
-      {/* <button className="button-23" onClick={handlesubmit}>
-        Search
-      </button> */}
+      {newdata.length > 0 ? (
+        <button className="button-23" onClick={handlesubmit}>
+          Clear
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

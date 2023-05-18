@@ -25,25 +25,16 @@ function Signup() {
   };
   return (
     <>
-      <h1 className="heading">Signup</h1>
       <form className="login">
+        <h1 className="heading">Signup</h1>
+        <br />
+        <br />
+        <br />
         <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          onChange={handlechange}
-          required
-        />
+        <input type="text" id="name" name="name" onChange={handlechange} />
 
         <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          onChange={handlechange}
-          required
-        />
+        <input type="email" id="email" name="email" onChange={handlechange} />
 
         <label for="password">Password:</label>
         <input

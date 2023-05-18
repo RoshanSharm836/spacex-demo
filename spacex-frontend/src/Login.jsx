@@ -27,8 +27,11 @@ function Login() {
   };
   return (
     <>
-      <h1 className="heading">Login</h1>
       <form className="login">
+        <h1 className="heading">Login</h1>
+        <br />
+        <br />
+        <br />
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" onChange={handlechange} />
 

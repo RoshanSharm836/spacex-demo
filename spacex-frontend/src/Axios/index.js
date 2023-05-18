@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const axios = Axios.create({
-  baseURL: "http://localhost:3059",
+  baseURL: "https://rich-tick-slip.cyclic.app/",
   headers: {
     "Content-Type": "application/json",
   },

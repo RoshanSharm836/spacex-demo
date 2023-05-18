@@ -4,11 +4,11 @@ function Card(el) {
   // console.table(el.data);
   return (
     <div className="card">
-      <h1>{el.data.capsule_serial}</h1>
-      <h1>{el.data.status}</h1>
-      <h1>{el.data.landings}</h1>
-      <p>{el.data.details}</p>
-      <p>{el.data.type}</p>
+      <h1>capsule_serial: {el.data.capsule_serial}</h1>
+      <h1>status: {el.data.status}</h1>
+      <p>landings: {el.data.landings}</p>
+      <p>details: {el.data.details}</p>
+      <p>type: {el.data.type}</p>
     </div>
   );
 }

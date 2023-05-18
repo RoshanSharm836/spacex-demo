@@ -8,7 +8,6 @@ import Pagenation from "./Pagenation";
 export default function App() {
   const [data, setData] = useState([]);
   const [newdata, setNewData] = useState([]);
-  const [filter, setFilter] = useState({});
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(5);
   useEffect(() => {
@@ -16,7 +15,7 @@ export default function App() {
   }, []);
 
   function calldata() {
-    axios.get("http://localhost:3059/api").then((res) => {
+    axios.get("https://rich-tick-slip.cyclic.app/api").then((res) => {
       setData(res.data.data);
       console.log(res.data);
     });
@@ -57,17 +56,17 @@ export default function App() {
       </section>
       <section className="filter_section">
         <h1 className="heading">Search form</h1>
-        <Filter filter={filter} setFilter={setFilter} func={filterdata} />
-        {newdata?.map((el) => {
-          return <Card data={el} />;
+        <Filter newdata={newdata} setNewData={setNewData} func={filterdata} />
+        {newdata?.map((el, i) => {
+          return <Card data={el} key={i} />;
         })}
       </section>
       <section>
         <h1 className="heading">All Capsules</h1>
 
         <div className="card_grid">
-          {Current?.map((el) => {
-            return <Card data={el} />;
+          {Current?.map((el, i) => {
+            return <Card data={el} key={i} />;
           })}
         </div>
         <Pagenation
