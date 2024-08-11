@@ -8,16 +8,18 @@ export default function Private({ children }) {
 
   useEffect(() => {
     handle();
-  });
+  }, [IsAuth]);
 
   async function handle() {
-    const a = await getToken();
-    console.log(a.data.auth);
-    setAuth(a.data?.auth);
+    try {
+      const a = await getToken();
+      console.log(a.data.auth);
+      setAuth(a.data?.auth);
+    } catch (error) {
+      return navigate("/");
+    }
   }
   if (IsAuth === true) {
     return children;
-  } else if (IsAuth === false) {
-    return navigate("/");
   }
 }
