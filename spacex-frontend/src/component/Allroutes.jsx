@@ -9,10 +9,10 @@ function Allroutes() {
   return (
     <div className="container-box ">
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
-          path="/home"
+          path="/"
           element={
             <Private>
               <App />

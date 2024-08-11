@@ -19,7 +19,7 @@ function Login() {
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("auth-token", token);
-        navigate("/home");
+        navigate("/");
       })
       .catch((err) => {
         alert("invalid email");

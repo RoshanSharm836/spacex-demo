@@ -25,7 +25,6 @@ function Signup() {
   };
   return (
     <>
-      {/* <img src="./suit.svg" alt="" /> */}
       <form className="login">
         <div className="login_box">
           <h1 className="heading">Signup</h1>

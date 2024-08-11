@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar">
       <NavLink to={"/home"}>home</NavLink>
 
-      <NavLink to={"/"}>logout</NavLink>
+      <NavLink to={"/login"}>logout</NavLink>
     </nav>
   );
 }
