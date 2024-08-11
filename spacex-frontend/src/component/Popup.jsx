@@ -1,10 +1,9 @@
 import React from "react";
 
-export default function Popup({ active, setActive, id }) {
+export default function Popup({ setActive, id }) {
   function togglePopup() {
     setActive(false);
   }
-  console.table(id);
   return (
     <div className="popup">
       <div className="popup-container">

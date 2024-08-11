@@ -22,7 +22,7 @@ function Login() {
         navigate("/");
       })
       .catch((err) => {
-        alert("invalid email");
+        console.log(err, "invalid email");
       });
   };
   return (
