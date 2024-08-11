@@ -18,7 +18,7 @@ export default function App() {
   }, []);
 
   function calldata() {
-    axios.get("https://rich-tick-slip.cyclic.app/api").then((res) => {
+    axios.get("https://spacex-demo.onrender.com/api").then((res) => {
       setData(res.data.data);
       console.log(res.data);
     });

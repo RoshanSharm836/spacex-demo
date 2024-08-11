@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const axios = Axios.create({
-  baseURL: "https://rich-tick-slip.cyclic.app/",
+  baseURL: "https://spacex-demo.onrender.com/",
   headers: {
     "Content-Type": "application/json",
   },
