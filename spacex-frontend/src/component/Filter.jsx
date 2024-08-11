@@ -1,7 +1,7 @@
 import React from "react";
 
 function Filter({ newdata, setNewData, func }) {
-  const handlesubmit = (e) => {
+  const handlesubmit = () => {
     setNewData([]);
   };
   const handlechange = (e) => {
